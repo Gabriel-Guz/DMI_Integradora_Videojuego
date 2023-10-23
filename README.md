@@ -60,7 +60,7 @@ H8.- Garantizará mayor alcance de instalación dentro de dispositivos móviles.
 H9.- El juego no tendrá alcance por no ser multiplataforma.
 H10.- El juego puede llegar a desensibilizar las actitudes y responsables hacia las leyes de tránsito.
 
-<P>
+</P>
 
 
 
