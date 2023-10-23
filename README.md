@@ -38,6 +38,7 @@
 ## Público Objetivo: 
 <p align="justify">
 El juego está dirigido a jugadores mayores de 16 años, apasionados por los juegos de carreras emocionantes con una narrativa intrigante y desafiante. También a aquellos que disfrutan de historias con personajes bien desarrollados y situaciones de alto riesgo.
+</p>
 
 ## Historia: 
 
@@ -60,7 +61,6 @@ H8.- Garantizará mayor alcance de instalación dentro de dispositivos móviles.
 H9.- El juego no tendrá alcance por no ser multiplataforma.
 H10.- El juego puede llegar a desensibilizar las actitudes y responsables hacia las leyes de tránsito.
 
-</P>
 
 
 
