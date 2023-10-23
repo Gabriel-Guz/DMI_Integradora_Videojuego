@@ -52,16 +52,19 @@ Hoy en día los videojuegos tienen un gran impacto en la sociedad debido el cont
 
 ## Hipótesis
 <p align="justify">
-- H1. El videojuego logrará un impacto positivo en la sociedad.
-- H2. El videojuego incrementará la demanda de aspectos violentos y menores de edad.
-- H3. El uso del videojuego con clasificación se puede recrear la capacidad de manejo del estrés en adultos.
-- H4. El videojuego se podrá instalar en diversos sistemas operativos.
-- H5. El videojuego nos dejará beneficios monetarios.
-- H6. El videojuego estará restringido a mayores de edad.
-- H7. La interfaz no dañará el aspecto visual de la sociedad debido al uso excesivo de colores.
-- H8. Garantizará un mayor alcance de instalación en dispositivos móviles.
-- H9. El juego será multiplataforma.
-- H10. El juego no desensibilizará a los usuarios hacia las leyes de tránsito.
+
+1. El videojuego logrará un impacto positivo en la sociedad.
+2. El videojuego incrementará la demanda de aspectos violentos y menores de edad.
+3. El uso del videojuego con clasificación se puede recrear la capacidad de manejo del estrés en adultos.
+4. El videojuego se podrá instalar en diversos sistemas operativos.
+5. El videojuego nos dejará beneficios monetarios.
+6. El videojuego estará restringido a menores de edad.
+7. La interfaz no dañará el aspecto visual de la sociedad debido al uso excesivo de colores.
+8. Garantizará un mayor alcance de instalación en dispositivos móviles.
+9. El juego será multiplataforma.
+10. El juego no desensibilizará a los usuarios hacia las leyes de tránsito.
+</p>
+
 </p>
 
 
