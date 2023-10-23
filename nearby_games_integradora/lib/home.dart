@@ -1,48 +1,48 @@
-// Creado por:
-// Asignatura: Desarrollo Movil Integral
-//Grado: 10   Grupo: "A"
-// Docente: MTI. Marco Antonio Ramirez Hernandez
-import 'package:flutter/material.dart'; // Importa la biblioteca Flutter para construir interfaces de usuario.
+import 'package:flutter/material.dart';
+import 'package:nearby_games_integradora/login.dart';
+import 'package:nearby_games_integradora/register.dart';
 
-class Home extends StatefulWidget {
-  const Home(
-      {super.key}); // Constructor de Home con un parámetro opcional llamado key.
-  @override
-  State<Home> createState() =>
-      _HomeState(); // Define una clase que extiende StatefulWidget y proporciona un método para crear su estado interno.
-}
-
-class _HomeState extends State<Home> {
-  // Define una clase que extiende State y representa el estado interno de Home.
-
-  // Estilo de fuente personalizado
-  final TextStyle customTextStyle = TextStyle(
-    fontFamily: 'MiFuente', // Nombre de la fuente definido en pubspec.yaml
-    fontSize: 16.0, // Tamaño de fuente deseado
-    fontWeight: FontWeight
-        .bold, // Puedes ajustar el peso de la fuente según tus preferencias
-  );
-
+class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // Crear una página Scaffold que contiene la estructura principal de la aplicación
-    return new Scaffold(
-      appBar: new AppBar(
-        // Barra de navegación superior (AppBar) con un título y un botón de búsqueda
-        title: new Text("Nearby_Games"), // Título de la aplicación
-        actions: <Widget>[
-          new IconButton(
-            icon: new Icon(
-              Icons.search,
-              color: Colors.white,
-            ),
-            onPressed: () {
-              // Acción a ejecutar cuando se presiona el botón de búsqueda
-            },
-          ),
-        ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Nearby_Games"),
       ),
-      body: PageView(),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Descripción de la Aplicación",
+              style: TextStyle(
+                fontSize: 24,
+                fontFamily: 'MiFuente',
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                // Navega a la pantalla de inicio de sesión (login)
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Login()));
+              },
+              child: Text("Iniciar Sesión"),
+            ),
+            SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                // Navega a la pantalla de registro (register)
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Register()));
+              },
+              child: Text("Registrarse"),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
