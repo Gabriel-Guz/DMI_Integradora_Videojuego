@@ -36,9 +36,9 @@
 ## Género: Carreras de Acción / Aventura.
 
 ## Público Objetivo: 
-<p align="justify">
+
 El juego está dirigido a jugadores mayores de 16 años, apasionados por los juegos de carreras emocionantes con una narrativa intrigante y desafiante. También a aquellos que disfrutan de historias con personajes bien desarrollados y situaciones de alto riesgo.
-<p>
+
 ## Historia: 
 <p align="justify">
 En un sombrío rincón de la ciudad, donde la economía se ha hundido debido a la pandemia, dos choferes de transporte público, Eliel-Kun y Bob Patiño, luchan por mantener a sus familias a salvo. La disminución en la demanda de transporte público los ha dejado con salarios insuficientes para sobrevivir. Desesperados por encontrar una solución, se sumergen en el mundo de las carreras ilegales, donde la velocidad y la astucia son la clave para ganar el premio que tanto necesitan.En su búsqueda de recursos para mantener a sus seres queridos a salvo, Eliel-Kun y Bob se topan con un mundo oscuro y peligroso. Las carreras ilegales no son solo una competencia entre vehículos, sino también una prueba de supervivencia contra mafiosos despiadados que controlan el submundo de las carreras clandestinas.Con el tiempo en su contra, nuestros héroes se embarcan en un emocionante viaje a través de la ciudad, compitiendo en carreras clandestinas y desafiando a los mafiosos en busca de respuestas y recursos. A lo largo de su viaje, conocen a una variedad de personajes, desde conductores rivales hasta informantes y mecánicos, cada uno con su propia historia y motivaciones.La historia se desarrolla a medida que Eliel-Kun y Bob se ven atrapados en una trama más grande de corrupción y secretos, mientras luchan por mantener a sus familias a salvo y ganar la carrera de sus vidas. 
