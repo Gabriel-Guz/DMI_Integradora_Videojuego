@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nearby_games_integradora/home_principal.dart';
 
 class Login extends StatelessWidget {
   @override
@@ -36,8 +37,10 @@ class Login extends StatelessWidget {
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  // Acción a ejecutar cuando se presiona el botón de inicio de sesión
-                  // Agrega aquí la lógica para verificar las credenciales
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Home_Principal()));
                 },
                 child: Text("Iniciar Sesión"),
               ),
