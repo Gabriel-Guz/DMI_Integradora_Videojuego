@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nearby_games_integradora/home.dart';
 import 'package:nearby_games_integradora/login.dart';
 
 class Register extends StatelessWidget {
@@ -41,14 +42,27 @@ class Register extends StatelessWidget {
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  // Acción a ejecutar cuando se presiona el botón de registrarse
-                  // Agrega aquí la lógica para el registro de usuario
-                  // Por ejemplo, puedes almacenar los datos en una base de datos
-                  // y luego navegar a la pantalla de inicio de sesión
+                  // Navega a la pantalla de registro (register)
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Login()));
                 },
-                child: Text("Registrarse"),
+                child: Text("Registrarse",
+                    style: TextStyle(fontSize: 18, shadows: [
+                      Shadow(
+                        color: Colors.white,
+                        offset: Offset(0, 0),
+                        blurRadius: 10,
+                      )
+                    ])),
+                style: ElevatedButton.styleFrom(
+                  primary: const Color.fromARGB(255, 230, 30, 30),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  elevation: 10,
+                  shadowColor: Color.fromARGB(255, 11, 204, 162),
+                  minimumSize: Size(140, 40),
+                ),
               ),
             ],
           ),

@@ -37,12 +37,29 @@ class Login extends StatelessWidget {
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
+                  // Navega a la pantalla de registro (register)
                   Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) => Home_Principal()));
                 },
-                child: Text("Iniciar Sesión"),
+                child: Text("Iniciar Sesion",
+                    style: TextStyle(fontSize: 18, shadows: [
+                      Shadow(
+                        color: Colors.white,
+                        offset: Offset(0, 0),
+                        blurRadius: 10,
+                      )
+                    ])),
+                style: ElevatedButton.styleFrom(
+                  primary: const Color.fromARGB(255, 230, 30, 30),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  elevation: 10,
+                  shadowColor: Color.fromARGB(255, 11, 204, 162),
+                  minimumSize: Size(140, 40),
+                ),
               ),
             ],
           ),
