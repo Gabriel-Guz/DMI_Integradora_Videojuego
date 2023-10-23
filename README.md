@@ -39,17 +39,19 @@
 <p align="justify">
 El juego está dirigido a jugadores mayores de 16 años, apasionados por los juegos de carreras emocionantes con una narrativa intrigante y desafiante. También a aquellos que disfrutan de historias con personajes bien desarrollados y situaciones de alto riesgo.
 </p>
-<p align="justify">
-## Historia: 
 
+## Historia: 
+<p align="justify">
 En un sombrío rincón de la ciudad, donde la economía se ha hundido debido a la pandemia, dos choferes de transporte público, Eliel-Kun y Bob Patiño, luchan por mantener a sus familias a salvo. La disminución en la demanda de transporte público los ha dejado con salarios insuficientes para sobrevivir. Desesperados por encontrar una solución, se sumergen en el mundo de las carreras ilegales, donde la velocidad y la astucia son la clave para ganar el premio que tanto necesitan.En su búsqueda de recursos para mantener a sus seres queridos a salvo, Eliel-Kun y Bob se topan con un mundo oscuro y peligroso. Las carreras ilegales no son solo una competencia entre vehículos, sino también una prueba de supervivencia contra mafiosos despiadados que controlan el submundo de las carreras clandestinas.Con el tiempo en su contra, nuestros héroes se embarcan en un emocionante viaje a través de la ciudad, compitiendo en carreras clandestinas y desafiando a los mafiosos en busca de respuestas y recursos. A lo largo de su viaje, conocen a una variedad de personajes, desde conductores rivales hasta informantes y mecánicos, cada uno con su propia historia y motivaciones.La historia se desarrolla a medida que Eliel-Kun y Bob se ven atrapados en una trama más grande de corrupción y secretos, mientras luchan por mantener a sus familias a salvo y ganar la carrera de sus vidas. 
+</p>
 
 ## Justificación
-
+<p align="justify">
 Hoy en día los videojuegos tienen un gran impacto en la sociedad debido el contenido que reflejan específicamente a jóvenes y niños por la alta demanda de prototipos basados en violencia, armas blancas y contenido que en ocasiones los  padre no pueden monitorear todo lo que sus hijos descargan en el transcurso del día, generalmente la mayoría de estos generan problemas de dependencia emocional o propia hacía los jóvenes que se dejan influenciar por estas modas, así como también el inicio de trastornos impulsivos, violentos, pensamientos no aptos a su edad llegando a tal grado de recrear escenas ficticias en la vida real, es por eso que decidimos crear un videojuego en 2d en el cual brindaremos entretenimiento al público. Como aplicar términos y condiciones de uso, implementar métodos de control parental, limitación del tiempo dentro del juego, limitación de acceso de acuerdo a la edad del usuario mediante el uso de cuentas autorizadas y verificadas en dos pasos. Debido a que el juego va enfocado a jóvenes mayores de edad con razonamiento muy avanzado respecto a su forma de pensar y razonar en cualquier factor que podemos encontrar actualmente, porque la finalidad es poder brindar a los usuarios una distracción y dejar a un lado las cargas personales del día a día generando diversión y poder desestresar al usuario. Una de las herramientas que ocuparemos para desarrollar el videojuego es Figma es un editor de gráficos vectorial y una herramienta de generación de prototipos, principalmente basada en la web, con características off-line adicionales está nos ayudará a crear el prototipo del videojuego antes de empezar a programar, otra herramienta vital para el desarrollo de este juego es Unity se utiliza principalmente para el desarrollo de videojuegos. El entorno permite crear juegos de ordenador y otras aplicaciones gráficas 3D y 2D interactivas para Windows, Linux y macOS.
+</p>
 
 ## Hipótesis
-
+<p align="justify">
 H1.- El videojuego logrará un impacto positivo en la sociedad.
 H2.- El videojuego incrementará la demanda de aspectos violentos y menores de edad.
 H3.- El uso del videojuego con clasificación se puede recrear la capacidad de manejo del estrés en adultos.
