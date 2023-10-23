@@ -56,10 +56,6 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Nearby_Games"),
-        backgroundColor: Colors.red,
-      ),
       body: Container(
         color: Colors.black, // Fondo negro de toda la pantalla
         padding: EdgeInsets.all(16.0), // Padding para la barra
