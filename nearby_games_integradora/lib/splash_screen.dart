@@ -1,7 +1,3 @@
-// Creado por:
-// Asignatura: Desarrollo Movil Integral
-//Grado: 10   Grupo: "A"
-// Docente: MTI. Marco Antonio Ramirez Hernandez
 import 'package:flutter/material.dart';
 import 'package:nearby_games_integradora/home.dart';
 import 'dart:async';
@@ -16,34 +12,35 @@ class _SplashScreenState extends State<SplashScreen> {
   bool _isLoading = true;
 
   void _simulateLoading() {
-    const totalDuration = Duration(seconds: 25);
-    const intervalDuration = Duration(seconds: 5);
+    const totalDuration = Duration(seconds: 10);
+    const updateInterval = Duration(milliseconds: 100);
     int intervals = 0;
+    int totalIntervals =
+        totalDuration.inMilliseconds ~/ updateInterval.inMilliseconds;
 
-    Timer.periodic(intervalDuration, (timer) {
-      if (intervals >= 5) {
+    Timer.periodic(updateInterval, (timer) {
+      if (intervals >= totalIntervals) {
         timer.cancel();
+        if (mounted) {
+          setState(() {
+            _isLoading = false;
+            _progress =
+                1.0; // Asegurarse de que el progreso sea exactamente 1.0
+          });
+          Navigator.of(context).pushReplacement(
+            MaterialPageRoute(
+              builder: (BuildContext context) => Home(),
+            ),
+          );
+        }
         return;
       }
       if (mounted) {
         setState(() {
-          _progress += 0.2;
+          _progress = (intervals + 1) / totalIntervals;
         });
       }
       intervals++;
-    });
-
-    Future.delayed(totalDuration, () {
-      if (mounted) {
-        setState(() {
-          _isLoading = false;
-        });
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-            builder: (BuildContext context) => Home(),
-          ),
-        );
-      }
     });
   }
 
@@ -57,8 +54,8 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.black, // Fondo negro de toda la pantalla
-        padding: EdgeInsets.all(16.0), // Padding para la barra
+        color: Colors.black,
+        padding: EdgeInsets.all(16.0),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -67,17 +64,17 @@ class _SplashScreenState extends State<SplashScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(
-                    'assets/carroCarga.png', // Ruta de la imagen del carro
-                    width: 200, // Ancho de la imagen del carro
-                    height: 200, // Altura de la imagen del carro
+                    'assets/carroCarga.png',
+                    width: 200,
+                    height: 200,
                   ),
                 ],
               ),
               Text(
                 _isLoading ? "Cargando..." : "Carga completada",
                 style: TextStyle(
-                  fontSize: 38, // Tamaño de texto más grande
-                  fontFamily: 'MiFuente', // Fuente personalizada
+                  fontSize: 38,
+                  fontFamily: 'MiFuente',
                 ),
               ),
               SizedBox(height: 20),
@@ -85,30 +82,25 @@ class _SplashScreenState extends State<SplashScreen> {
                 Column(
                   children: [
                     SizedBox(
-                      height: 25, // Hacer la barra más alta
-
+                      height: 25,
                       child: LinearProgressIndicator(
                         value: _progress,
-                        backgroundColor:
-                            Colors.white, // Fondo blanco de la barra
+                        backgroundColor: Colors.white,
                         valueColor: AlwaysStoppedAnimation<Color>(
-                            Color.fromARGB(255, 65, 142,
-                                241)), // Cambiar el color de carga a rojo
+                            Color.fromARGB(255, 65, 142, 241)),
                       ),
                     ),
-
                     SizedBox(
-                      height: 10, // Espacio entre la barra y el porcentaje
+                      height: 10,
                     ),
                     Text(
-                      "${(_progress * 100).toInt()}%", // Porcentaje
+                      "${(_progress * 100).toInt()}%",
                       style: TextStyle(
-                        color: Colors.white, // Texto en blanco
-                        fontSize: 32, // Tamaño de porcentaje más grande
+                        color: Colors.white,
+                        fontSize: 32,
                       ),
                     ),
-                    SizedBox(
-                        height: 20), // Espacio entre el porcentaje y la imagen
+                    SizedBox(height: 20),
                   ],
                 ),
             ],

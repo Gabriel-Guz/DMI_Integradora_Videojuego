@@ -27,6 +27,9 @@ flutter:
     # - assets/poster.jpg
     - assets/carroCarga.png
     - assets/icono.png
+    - assets/facebook.png
+    - assets/github.png
+    - assets/google.png
   fonts:
     - family: MiFuente
       fonts:
