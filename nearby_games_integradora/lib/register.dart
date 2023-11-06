@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:nearby_games_integradora/home.dart';
 import 'package:nearby_games_integradora/login.dart';
 import 'package:nearby_games_integradora/home_principal.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class Register extends StatelessWidget {
+  final GoogleSignIn _googleSignIn = GoogleSignIn(
+    clientId:
+        '223963518802-3f690udrr340fm02joj1js5gt7qcjge8.apps.googleusercontent.com',
+    scopes: ['profile', 'email'],
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Registrarse"),
-        backgroundColor: Color.fromARGB(255, 32, 31,
-            31), // Establece el color de fondo del Scaffold en negro
+        backgroundColor:
+            Colors.black, // Establece el color de fondo del AppBar en negro
       ),
       body: Container(
         color: Colors.black,
@@ -46,9 +52,11 @@ class Register extends StatelessWidget {
             SizedBox(height: 40),
             ElevatedButton(
               onPressed: () {
-                // Navega a la pantalla de registro (register)
+                // Navega a la pantalla de inicio de sesión (Login)
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Login()));
+                  context,
+                  MaterialPageRoute(builder: (context) => Login()),
+                );
               },
               child: Text(
                 "Registrarse",
@@ -61,13 +69,12 @@ class Register extends StatelessWidget {
                 ]),
               ),
               style: ElevatedButton.styleFrom(
-                primary: const Color.fromARGB(255, 230, 30, 30),
+                primary: Color(
+                    0xFFE61E1E), // Usar el código de color en lugar de ARGB
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(100),
                 ),
                 elevation: 10,
-                shadowColor: Color.fromARGB(255, 11, 204, 162),
-                minimumSize: Size(140, 40),
               ),
             ),
             SizedBox(height: 10),
@@ -76,44 +83,94 @@ class Register extends StatelessWidget {
               children: [
                 IconButton(
                   icon: Image.asset(
-                    'assets/facebook.png', // Ruta de la imagen del ícono de Facebook en assets
-                    width: 50, // Ancho de la imagen
-                    height: 50, // Altura de la imagen
+                    'assets/facebook.png',
+                    width: 50,
+                    height: 50,
                   ),
-                  iconSize:
-                      60, // Tamaño del icono (ajusta este valor según tus preferencias)
+                  iconSize: 60,
                   onPressed: () {
-                    // Agrega aquí la lógica para el inicio de sesión con Facebook
-                  },
-                ),
-                IconButton(
-                  icon: Image.asset(
-                    'assets/google.png', // Ruta de la imagen del ícono de Facebook en assets
-                    width: 100, // Ancho de la imagen
-                    height: 100, // Altura de la imagen
-                  ),
-                  iconSize:
-                      60, // Tamaño del icono (ajusta este valor según tus preferencias)
-                  onPressed: () {
-                    // Agrega aquí la lógica para el inicio de sesión con Facebook
-                  },
-                ),
-                IconButton(
-                  icon: Image.asset(
-                    'assets/github.png', // Ruta de la imagen del ícono de Facebook en assets
-                    width: 100, // Ancho de la imagen
-                    height: 100, // Altura de la imagen
-                  ),
-                  iconSize:
-                      60, // Tamaño del icono (ajusta este valor según tus preferencias)
-                  onPressed: () {
-                    // Navega a la pantalla principal
                     Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => Home_Principal()));
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => HomePrincipal(),
+                      ),
+                    ); // Agrega aquí la lógica para el inicio de sesión con Facebook
                   },
                 ),
+                IconButton(
+                    icon: Image.asset(
+                      'assets/google.png',
+                      width: 100,
+                      height: 100,
+                    ),
+                    iconSize: 60,
+                    onPressed: () async {
+                      try {
+                        final GoogleSignInAccount? googleUser =
+                            await _googleSignIn.signIn();
+
+                        if (googleUser != null) {
+                          // Autenticación exitosa, muestra las credenciales del usuario en la consola
+                          print(
+                              'Inició sesión con Google: ${googleUser.displayName}');
+                          print('Email: ${googleUser.email}');
+                          print('ID de usuario: ${googleUser.id}');
+                          // Puedes agregar más detalles de usuario si es necesario
+
+                          // Redirige al usuario a la pantalla principal o ejecuta cualquier otra lógica necesaria.
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => HomePrincipal(),
+                            ),
+                          );
+                        } else {
+                          // En caso de que no se haya autenticado correctamente
+                          print('No se pudo iniciar sesión con Google.');
+                        }
+                      } catch (error) {
+                        // Maneja la excepción
+                        print('Error al iniciar sesión con Google: $error');
+                      }
+                    }),
+                IconButton(
+                    icon: Image.asset(
+                      'assets/github.png',
+                      width: 100,
+                      height: 100,
+                    ),
+                    iconSize: 60,
+                    onPressed: () async {
+                      try {
+                        final GoogleSignInAccount? googleUser =
+                            await _googleSignIn.signIn();
+
+                        if (googleUser != null) {
+                          // Autenticación exitosa, muestra las credenciales del usuario en la consola
+                          print(
+                              'Inició sesión con Google: ${googleUser.displayName}');
+                          print('Email: ${googleUser.email}');
+                          print('ID de usuario: ${googleUser.id}');
+                          // Puedes agregar más detalles de usuario si es necesario
+
+                          // Redirige al usuario a la pantalla principal o ejecuta cualquier otra lógica necesaria.
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => HomePrincipal(),
+                            ),
+                          );
+                        } else {
+                          // El usuario canceló el inicio de sesión
+                          print(
+                              'El usuario canceló el inicio de sesión con Google.');
+                          // Puedes mostrar un mensaje al usuario o realizar otra acción aquí.
+                        }
+                      } catch (error) {
+                        // Maneja la excepción
+                        print('Error al iniciar sesión con Google: $error');
+                      }
+                    }),
               ],
             )
           ],
